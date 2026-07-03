@@ -214,30 +214,44 @@ img {
   height: 100%;
 }
 
-.logo {
-  font-family: 'Outfit', sans-serif;
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+  font-family:'Outfit',sans-serif;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-0.5px;
 }
 
-.logo-icon {
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(135deg, var(--brand-brown) 0%, var(--brand-gold) 100%);
-  border-radius: 6px;
-  transform: rotate(45deg);
+.logo-icon-wrapper{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+  flex-shrink:0;
 }
 
-.logo-text {
-  color: var(--text-primary);
+.logo-icon{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  border-radius: 80%;
 }
 
-.logo-text span {
-  color: var(--brand-gold-dark);
+.logo-text{
+  color:var(--text-primary);
+  line-height:1;
+}
+
+.logo-text span{
+  color:var(--brand-gold-dark);
 }
 
 .nav-links {
@@ -249,7 +263,6 @@ img {
 .nav-item {
   position: relative;
   font-size: 15px;
-  font-weight: 500;
   color: var(--text-secondary);
   padding: 8px 0;
   cursor: pointer;
@@ -457,7 +470,7 @@ img {
 }
 
 .bento-card-large {
-  grid-column: span 2;
+  grid-column: span 1;
 }
 
 .bento-card-tall {

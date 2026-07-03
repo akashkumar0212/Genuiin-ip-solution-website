@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from './ThemeProvider';
-import { Sun, Moon, ChevronDown, Award, Shield, FileText, Globe, Layers, TreeDeciduous } from 'lucide-react';
+import { Sun, Moon, ChevronDown, Award, Shield, Copyright, Globe, Layers, TreeDeciduous } from 'lucide-react';
+import { FaTrademark } from "react-icons/fa6";
 
 export const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -10,9 +11,9 @@ export const Navbar = () => {
 
   const services = [
     { name: 'Patent', path: '/services/patent', icon: <Shield size={16} /> },
-    { name: 'Trademark', path: '/services/trademark', icon: <Award size={16} /> },
+    { name: 'Trademark', path: '/services/trademark', icon: <FaTrademark size={16} /> },
     { name: 'Industrial Design', path: '/services/industrial-design', icon: <Layers size={16} /> },
-    { name: 'Copyright', path: '/services/copyright', icon: <FileText size={16} /> },
+    { name: 'Copyright', path: '/services/copyright', icon: <Copyright size={16} /> },
     { name: 'Geographical Indication', path: '/services/geographical-indication', icon: <Globe size={16} /> },
     { name: 'Plant Variety Protection', path: '/services/plant-protection', icon: <TreeDeciduous size={16} /> }
   ];
@@ -25,10 +26,12 @@ export const Navbar = () => {
   return (
     <header className="header">
       <div className="container nav-container">
-        <NavLink to="/" className="logo" onClick={handleLinkClick}>
-          <div className="logo-icon"></div>
-          <div className="logo-text">Genuiin <span>IP</span></div>
-        </NavLink>
+      <NavLink to="/" className="logo" onClick={handleLinkClick}>
+        <img src="/favicon.png" alt="Genuiin Logo" className="logo-icon" />
+        <div className="logo-text">
+          Genuiin <span>IP</span>
+        </div>
+      </NavLink>
 
         <nav>
           <ul className={`nav-links ${isMobileOpen ? 'active' : ''}`}>
