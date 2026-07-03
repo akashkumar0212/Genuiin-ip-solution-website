@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Search, FileCode, CheckCircle, Eye, ShieldAlert } from 'lucide-react';
+import { CopyrightIcon, Search, FileCode, CheckCircle, Eye, ShieldAlert } from 'lucide-react';
 
 export const Copyright = () => {
   const services = [
@@ -14,7 +14,7 @@ export const Copyright = () => {
     <div className="container section-padding fade-in-up">
       <div style={{ marginBottom: '48px' }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--brand-gold-dark)', fontWeight: '600', fontSize: '13px', textTransform: 'uppercase', marginBottom: '12px' }}>
-          <FileText size={16} /> IP Service Detail
+          <CopyrightIcon size={16} /> IP Service Detail
         </div>
         <h1 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '16px' }}>Copyright Solutions</h1>
         <p style={{ color: 'var(--text-secondary)', fontSize: '18px', maxWidth: '800px', lineHeight: '1.6' }}>

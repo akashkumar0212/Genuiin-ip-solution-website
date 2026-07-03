@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Award, Layers, FileText, Globe, TreeDeciduous, ArrowRight, CheckCircle, HelpCircle, Lock, Cpu, Sparkles } from 'lucide-react';
+import { ShieldAlert, BadgeCheck, Layers, Copyright, Globe, TreeDeciduous, ArrowRight, CheckCircle, HelpCircle, Lock, Cpu, Sparkles } from 'lucide-react';
+import { FaTrademark } from "react-icons/fa6";
 
 export const Home = () => {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -12,16 +13,23 @@ export const Home = () => {
   const services = [
     {
       name: 'Patent Protection',
-      desc: 'Momentous experience supporting application drafting, filing, and prosecution in compliance with IPO, USPTO, EPO, and WIPO standards.',
-      icon: <Shield size={24} />,
+      desc: 'Genuiin IP Solutions has momentous experience supporting application drafting, filing, and prosecution in compliance with IPO, USPTO, EPO, and WIPO standards.',
+      icon: <ShieldAlert size={24} />,
       link: '/services/patent',
       sizeClass: 'bento-card-large'
     },
     {
       name: 'Trademark',
       desc: 'Skilled attorneys assisting in registration, watch, oppositions, and maintaining your marks for potential branding growth.',
-      icon: <Award size={24} />,
+      icon: <FaTrademark size={24} />,
       link: '/services/trademark',
+      sizeClass: ''
+    },
+    {
+      name: 'Copyright',
+      desc: 'Comprehensive copyright search, registration, and watch services for original literary, dramatic, musical, or artistic works.',
+      icon: <Copyright size={24} />,
+      link: '/services/copyright',
       sizeClass: ''
     },
     {
@@ -29,13 +37,6 @@ export const Home = () => {
       desc: 'Advice and protection for shapes, configurations, patterns, and ornaments applied to articles in 2D or 3D forms.',
       icon: <Layers size={24} />,
       link: '/services/industrial-design',
-      sizeClass: ''
-    },
-    {
-      name: 'Copyright',
-      desc: 'Comprehensive copyright search, registration, and watch services for original literary, dramatic, musical, or artistic works.',
-      icon: <FileText size={24} />,
-      link: '/services/copyright',
       sizeClass: ''
     },
     {
@@ -76,15 +77,15 @@ export const Home = () => {
   return (
     <div className="fade-in-up">
       {/* Hero Section */}
-      <section style={{ position: 'relative', padding: '120px 0 80px 0', overflow: 'hidden' }}>
+      <section style={{ position: 'relative', padding: '80px 0 80px 0', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, rgba(207, 185, 136, 0.12) 0%, transparent 70%)', zIndex: -1 }}></div>
         <div className="container" style={{ textAlign: 'center' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', borderRadius: '50px', backgroundColor: 'var(--brand-gold-light)', border: '1px solid var(--border-color)', marginBottom: '24px' }}>
-            <Sparkles size={14} color="var(--brand-gold-dark)" />
-            <span style={{ fontSize: '12px', fontWeight: '600', color: 'var(--text-secondary)' }}>World-Class IP Support & Research</span>
-          </div>
+          {/* <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', borderRadius: '50px', backgroundColor: 'var(--brand-gold-light)', border: '1px solid var(--border-color)', marginBottom: '24px' }}> */}
+            {/* <Sparkles size={14} color="var(--brand-gold-dark)" /> */}
+            {/* <span style={{ fontSize: '12px', fontWeight: '600', color: 'var(--text-secondary)' }}>World-Class IP Support & Research</span> */}
+          {/* </div> */}
           <h1 style={{ fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: '800', maxWidth: '900px', margin: '0 auto 24px auto', letterSpacing: '-1px' }}>
-            Protecting Innovation. <span className="text-gradient">Enforcing Rights.</span>
+            Protecting Innovation. <span className="text-gradient">Intellectual Property Rights (IPR) .</span>
           </h1>
           <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'var(--text-secondary)', lineHeight: '1.7', maxWidth: '750px', margin: '0 auto 40px auto' }}>
             Genuiin IP Solutions LLP provides premium intellectual property research analysis, watch, and litigation support services to corporations, law firms, and research universities globally.
@@ -109,18 +110,36 @@ export const Home = () => {
           </div>
 
           <div className="bento-grid">
-            {services.map((svc, idx) => (
-              <div key={idx} className={`bento-card ${svc.sizeClass}`}>
-                <div>
-                  <div className="bento-icon">{svc.icon}</div>
-                  <h3 className="bento-title">{svc.name}</h3>
-                  <p className="bento-desc">{svc.desc}</p>
-                </div>
-                <Link to={svc.link} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '700', color: 'var(--brand-gold-dark)', marginTop: '24px' }}>
-                  Learn More <ArrowRight size={14} />
-                </Link>
+          {services.map((svc, idx) => (
+            <Link
+              key={idx}
+              to={svc.link}
+              className={`bento-card ${svc.sizeClass}`}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <div>
+                <div className="bento-icon">{svc.icon}</div>
+
+                <h3 className="bento-title">{svc.name}</h3>
+
+                <p className="bento-desc">{svc.desc}</p>
               </div>
-            ))}
+
+              <span
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  fontSize: "13px",
+                  fontWeight: "700",
+                  color: "var(--brand-gold-dark)",
+                  marginTop: "24px",
+                }}
+              >
+                Learn More <ArrowRight size={14} />
+              </span>
+            </Link>
+          ))}
           </div>
         </div>
       </section>
