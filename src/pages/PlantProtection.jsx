@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from "../components/SEO";
 import { TreeDeciduous, Wheat, Flame, HelpCircle } from 'lucide-react';
 
 export const PlantProtection = () => {
@@ -39,6 +40,12 @@ export const PlantProtection = () => {
   ];
 
   return (
+    <>
+    <SEO
+    title="Plant Variety Protection Registration"
+    description="Plant Variety Protection registration and legal assistance for breeders and agricultural innovators."
+    keywords="Plant Variety Protection, Plant Protection Registration, PPVFR"
+    />
     <div className="container section-padding fade-in-up">
       <div style={{ marginBottom: '48px' }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--brand-gold-dark)', fontWeight: '600', fontSize: '13px', textTransform: 'uppercase', marginBottom: '12px' }}>
@@ -89,6 +96,7 @@ export const PlantProtection = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default PlantProtection;

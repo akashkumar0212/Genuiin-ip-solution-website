@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from "../components/SEO";
 import { Shield, FileText, Search, RefreshCw, Scale, DollarSign, ArrowRight, BookOpen, AlertCircle } from 'lucide-react';
 
 export const Patent = () => {
@@ -13,6 +14,12 @@ export const Patent = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Patent Filing in India | Patent Registration Services"
+        description="Professional patent filing and registration services in India. Patent drafting, prosecution, patent search, IP consulting, and legal support."
+        keywords="Patent Filing India, Patent Registration India, Patent Drafting Services, Patent Attorney India, Patent Prosecution, Patent Agent India, Patent Filing for Startups, Patent Filing for Universities"
+      />
     <div className="container section-padding fade-in-up">
       <div style={{ marginBottom: '48px' }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--brand-gold-dark)', fontWeight: '600', fontSize: '13px', textTransform: 'uppercase', marginBottom: '12px' }}>
@@ -241,6 +248,7 @@ export const Patent = () => {
         )}
       </div>
     </div>
+  </>
   );
 };
 export default Patent;

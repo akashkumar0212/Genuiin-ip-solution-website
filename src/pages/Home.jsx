@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from "../components/SEO";
 import { ShieldAlert, BadgeCheck, Layers, Copyright, Globe, TreeDeciduous, ArrowRight, CheckCircle, HelpCircle, Lock, Cpu, Sparkles } from 'lucide-react';
 import { FaTrademark } from "react-icons/fa6";
 
@@ -75,6 +76,12 @@ export const Home = () => {
   ];
 
   return (
+  <>
+    <SEO
+      title="Patent & Trademark Attorneys in India | Genuiin IP Solutions"
+      description="Protect your innovations with Genuiin IP Solutions. We provide patent filing, trademark registration, industrial design protection, copyright registration, patent search, IP analytics, prosecution, litigation support, and intellectual property consulting across India."
+      keywords="Patent Filing India, Patent Registration India, Trademark Registration India, Patent Attorney India, Patent Drafting Services, Trademark Filing, Industrial Design Registration, Copyright Registration India, Patent Search, IP Litigation"
+    />
     <div className="fade-in-up">
       {/* Hero Section */}
       <section style={{ position: 'relative', padding: '80px 0 80px 0', overflow: 'hidden' }}>
@@ -264,7 +271,8 @@ export const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+        </div>
+  </>
+);
 };
 export default Home;

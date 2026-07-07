@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://genuiin-ip.com/sitemap.xml

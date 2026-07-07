@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from "../components/SEO";
 import { Mail, Phone, MapPin, Landmark, MessageSquare, Send, CheckCircle2 } from 'lucide-react';
 
 export const ContactUs = () => {
@@ -16,6 +17,12 @@ export const ContactUs = () => {
   };
 
   return (
+    <>
+    <SEO
+    title="Contact Genuiin IP Solutions LLP"
+    description="Contact Genuiin IP Solutions LLP for patent filing, trademark registration, copyright registration, and IP consulting."
+    keywords="Contact Patent Attorney India, Contact Trademark Lawyer"
+    />
     <div className="container section-padding fade-in-up">
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '60px', alignItems: 'flex-start' }}>
         
@@ -167,6 +174,7 @@ export const ContactUs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default ContactUs;
