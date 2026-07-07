@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from "../components/SEO";
 import { CopyrightIcon, Search, FileCode, CheckCircle, Eye, ShieldAlert } from 'lucide-react';
 
 export const Copyright = () => {
@@ -11,6 +12,12 @@ export const Copyright = () => {
   ];
 
   return (
+    <>
+    <SEO
+    title="Copyright Registration in India"
+    description="Copyright registration services for software, books, music, artwork, architecture, and digital content."
+    keywords="Copyright Registration India, Software Copyright, Copyright Protection, Copyright Lawyer"
+    />
     <div className="container section-padding fade-in-up">
       <div style={{ marginBottom: '48px' }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--brand-gold-dark)', fontWeight: '600', fontSize: '13px', textTransform: 'uppercase', marginBottom: '12px' }}>
@@ -34,6 +41,7 @@ export const Copyright = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 export default Copyright;

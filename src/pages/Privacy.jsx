@@ -1,8 +1,15 @@
 import React from 'react';
+import SEO from "../components/SEO";
 import { Shield } from 'lucide-react';
 
 export const Privacy = () => {
   return (
+    <>
+    <SEO
+    title="Privacy Policy"
+    description="Privacy Policy of Genuiin IP Solutions LLP."
+    robots="noindex, follow"
+    />
     <div className="container section-padding fade-in-up" style={{ maxWidth: '800px' }}>
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
         <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto', color: 'var(--brand-gold-dark)' }}>
@@ -30,6 +37,7 @@ export const Privacy = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 export default Privacy;

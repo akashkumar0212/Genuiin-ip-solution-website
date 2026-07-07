@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from "../components/SEO";
 import { Globe, Search, FileText, CheckCircle, Eye, ShieldAlert, RefreshCw } from 'lucide-react';
 
 export const GeographicalIndication = () => {
@@ -11,6 +12,12 @@ export const GeographicalIndication = () => {
   ];
 
   return (
+    <>
+    <SEO
+    title="Geographical Indication Registration in India"
+    description="GI Registration services to protect region-specific products under Indian Intellectual Property laws."
+    keywords="Geographical Indication Registration, GI Registration India"
+    />
     <div className="container section-padding fade-in-up">
       <div style={{ marginBottom: '48px' }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--brand-gold-dark)', fontWeight: '600', fontSize: '13px', textTransform: 'uppercase', marginBottom: '12px' }}>
@@ -34,6 +41,7 @@ export const GeographicalIndication = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 export default GeographicalIndication;

@@ -1,8 +1,15 @@
 import React from 'react';
+import SEO from "../components/SEO";
 import { AlertTriangle } from 'lucide-react';
 
 export const Disclaimer = () => {
   return (
+    <>
+    <SEO
+    title="Disclaimer"
+    description="Legal Disclaimer of Genuiin IP Solutions LLP."
+    robots="noindex, follow"
+    />
     <div className="container section-padding fade-in-up" style={{ maxWidth: '800px' }}>
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
         <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto', color: 'var(--brand-gold-dark)' }}>
@@ -24,6 +31,7 @@ export const Disclaimer = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 export default Disclaimer;

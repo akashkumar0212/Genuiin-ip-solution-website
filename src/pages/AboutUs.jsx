@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from "../components/SEO";
 import { Shield, Sparkles, Clock, DollarSign, Award, ThumbsUp, GitMerge, FileCheck } from 'lucide-react';
 
 export const AboutUs = () => {
@@ -14,6 +15,12 @@ export const AboutUs = () => {
   ];
 
   return (
+    <>
+    <SEO
+    title="About Genuiin IP Solutions LLP"
+    description="Learn about Genuiin IP Solutions LLP, India's trusted Intellectual Property consulting firm."
+    keywords="About Genuiin IP Solutions, Patent Attorneys India"
+    />
     <div className="container section-padding fade-in-up">
       {/* Intro section */}
       <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '60px', alignItems: 'center', marginBottom: '80px' }}>
@@ -70,6 +77,7 @@ export const AboutUs = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 export default AboutUs;

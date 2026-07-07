@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from "../components/SEO";
 import { BookOpen, Search, GraduationCap, Award, Landmark, Users, Mail, ArrowRight } from 'lucide-react';
 
 export const Training = () => {
@@ -42,6 +43,12 @@ export const Training = () => {
   };
 
   return (
+    <>
+    <SEO
+    title="IP Training Programs"
+    description="Professional Intellectual Property training for startups, universities, innovators, and businesses."
+    keywords="IP Training India, Patent Training, Trademark Training"
+    />
     <div className="container section-padding fade-in-up">
       {/* Intro */}
       <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '60px', alignItems: 'center', marginBottom: '60px' }}>
@@ -149,6 +156,7 @@ export const Training = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
