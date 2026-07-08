@@ -9,7 +9,7 @@ export const Footer = () => {
           <div>
             <Link to="/" className="logo">
               <div className="logo-icon"></div>
-              <div className="logo-text">Genuiin <span>IP</span></div>
+              <div className="logo-text">Genuiin IP <span>Solution LLP</span></div>
             </Link>
             <p className="footer-desc">
               Provides world-class IP research analysis and consultancy services across the globe. 
