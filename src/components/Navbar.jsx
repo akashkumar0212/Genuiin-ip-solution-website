@@ -29,7 +29,7 @@ export const Navbar = () => {
       <NavLink to="/" className="logo" onClick={handleLinkClick}>
         <img src="/favicon.png" alt="Genuiin Logo" className="logo-icon" />
         <div className="logo-text">
-          Genuiin <span>IP</span>
+          Genuiin IP <span>Solution </span><span>LLP</span>
         </div>
       </NavLink>
 
