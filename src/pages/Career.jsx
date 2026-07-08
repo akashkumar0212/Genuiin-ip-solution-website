@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from "../components/SEO";
 import { Award, Briefcase, Mail, Upload, FileCheck, CheckCircle2 } from 'lucide-react';
 
 export const Career = () => {
@@ -29,6 +30,11 @@ export const Career = () => {
   };
 
   return (
+    <>
+    <SEO
+    title="Careers | Genuiin IP Solutions LLP"
+    description="Join Genuiin IP Solutions LLP and build your career in Intellectual Property."
+    />
     <div className="container section-padding fade-in-up">
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'flex-start', marginBottom: '60px' }}>
         <div>
@@ -170,6 +176,7 @@ export const Career = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default Career;

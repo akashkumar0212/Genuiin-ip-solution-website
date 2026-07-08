@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from "../components/SEO";
 import { Layers, Search, FileText, CheckCircle, RefreshCw, Eye, ShieldAlert } from 'lucide-react';
 
 export const IndustrialDesign = () => {
@@ -12,6 +13,12 @@ export const IndustrialDesign = () => {
   ];
 
   return (
+    <>
+    <SEO
+    title="Industrial Design Registration in India"
+    description="Protect your product designs with Industrial Design Registration and Design Protection services."
+    keywords="Industrial Design Registration, Design Registration India, Design Protection,	Product Design Registration"
+    />
     <div className="container section-padding fade-in-up">
       <div style={{ marginBottom: '48px' }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--brand-gold-dark)', fontWeight: '600', fontSize: '13px', textTransform: 'uppercase', marginBottom: '12px' }}>
@@ -35,6 +42,7 @@ export const IndustrialDesign = () => {
         ))}
       </div>
     </div>
+  </>
   );
 };
 export default IndustrialDesign;

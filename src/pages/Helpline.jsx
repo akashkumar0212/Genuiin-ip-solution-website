@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from "../components/SEO";
 import { MessageSquare, Mail, Send, CheckCircle2, Clock } from 'lucide-react';
 
 export const Helpline = () => {
@@ -21,6 +22,11 @@ export const Helpline = () => {
   };
 
   return (
+    <>
+    <SEO
+    title="IP Helpline"
+    description="Speak with experienced Intellectual Property professionals for expert guidance."
+    />
     <div className="container section-padding fade-in-up">
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '60px', alignItems: 'flex-start' }}>
         <div>
@@ -132,6 +138,7 @@ export const Helpline = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default Helpline;

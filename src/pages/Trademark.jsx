@@ -1,5 +1,7 @@
 import React from 'react';
+import SEO from "../components/SEO";
 import { Award, Search, FileText, CheckCircle, Clock, ShieldAlert } from 'lucide-react';
+import { FaTrademark } from "react-icons/fa6";
 
 export const Trademark = () => {
   const services = [
@@ -36,10 +38,16 @@ export const Trademark = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Trademark Registration in India | Trademark Filing"
+        description="Protect your brand with trademark registration, trademark search, filing, opposition, renewal, and legal support."
+        keywords="Trademark Registration India, Trademark Filing, Trademark Search, Trademark Attorney, Brand Registration,	Trademark Opposition, Trademark Rectification,Trademark Renewal "
+      />
     <div className="container section-padding fade-in-up">
       <div style={{ marginBottom: '48px' }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--brand-gold-dark)', fontWeight: '600', fontSize: '13px', textTransform: 'uppercase', marginBottom: '12px' }}>
-          <Award size={16} /> IP Service Detail
+          <FaTrademark size={16} /> IP Service Detail
         </div>
         <h1 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '16px' }}>Trademark Solutions</h1>
         <p style={{ color: 'var(--text-secondary)', fontSize: '18px', maxWidth: '800px', lineHeight: '1.6' }}>
@@ -59,6 +67,7 @@ export const Trademark = () => {
         ))}
       </div>
     </div>
+  </>
   );
 };
 export default Trademark;
