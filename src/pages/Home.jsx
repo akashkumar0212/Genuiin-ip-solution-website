@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import SEO from "../components/SEO";
 import { ShieldAlert, BadgeCheck, Layers, Copyright, Globe, TreeDeciduous, ArrowRight, CheckCircle, HelpCircle, Lock, Cpu, Sparkles } from 'lucide-react';
 import { FaTrademark } from "react-icons/fa6";
 
 export const Home = () => {
+  const navigate = useNavigate();
   const [activeFaq, setActiveFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -17,7 +19,7 @@ export const Home = () => {
       desc: 'Genuiin IP Solutions has momentous experience supporting application drafting, filing, and prosecution in compliance with IPO, USPTO, EPO, and WIPO standards.',
       icon: <ShieldAlert size={24} />,
       link: '/services/patent',
-      sizeClass: 'bento-card-large'
+      sizeClass: ''
     },
     {
       name: 'Trademark',
@@ -52,7 +54,7 @@ export const Home = () => {
       desc: 'Dedicated support for protecting and filing new plant varieties in India across 15 eligible crop types under national legislation.',
       icon: <TreeDeciduous size={24} />,
       link: '/services/plant-protection',
-      sizeClass: 'bento-card-large'
+      sizeClass: ''
     }
   ];
 
@@ -109,7 +111,8 @@ export const Home = () => {
       {/* Services Grid (Bento) */}
       <section className="section-padding" style={{ backgroundColor: 'var(--bg-primary)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '60px' ,marginTop: '-120px'
+          }}>
             <h2 style={{ fontSize: '32px', marginBottom: '16px' }}>Core IP Protection Services</h2>
             <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
               We cover the entire lifecycle of IP creation, from preliminary analytical search and filing, to litigation watch and valuation.
@@ -197,7 +200,7 @@ export const Home = () => {
             </div>
 
             {/* Visual representation card */}
-            <div style={{ backgroundColor: 'var(--bg-primary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-xl)', padding: '40px', boxShadow: 'var(--shadow-lg)' }}>
+            <div style={{ backgroundColor: 'var(--bg-primary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-xl)', padding: '40px', boxShadow: 'var(--shadow-lg)'}}>
               <h3 style={{ fontSize: '22px', marginBottom: '24px' }}>Secure IP Lifecycle Support</h3>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>

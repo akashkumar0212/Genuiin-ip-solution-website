@@ -26,12 +26,10 @@ export const Navbar = () => {
   return (
     <header className="header">
       <div className="container nav-container">
-      <NavLink to="/" className="logo" onClick={handleLinkClick}>
-        <img src="/favicon.png" alt="Genuiin Logo" className="logo-icon" />
-        <div className="logo-text">
-          Genuiin <span>IP</span>
-        </div>
-      </NavLink>
+        <NavLink to="/" className="logo" onClick={handleLinkClick}>
+          <div className="logo-icon"></div>
+          <div className="logo-text">Genuiin <span>IP Solution LLP</span></div>
+        </NavLink>
 
         <nav>
           <ul className={`nav-links ${isMobileOpen ? 'active' : ''}`}>
@@ -119,13 +117,13 @@ export const Navbar = () => {
         </nav>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <button 
+          {/* <button 
             onClick={toggleTheme} 
             className="theme-toggle"
             aria-label="Toggle dark/light theme"
           >
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+          </button> */}
           
           <button 
             className="hamburger" 

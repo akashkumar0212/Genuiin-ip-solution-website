@@ -5,9 +5,9 @@ import './styles/global.css';
 
 function App() {
   return (
-    <ThemeProvider>
+     <ThemeProvider>
       <AppRouter />
-    </ThemeProvider>
+     </ThemeProvider>
   );
 }
 
