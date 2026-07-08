@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Shield, Award, Layers, FileText, Globe, TreeDeciduous, ArrowRight, CheckCircle, HelpCircle, Lock, Cpu, Sparkles } from 'lucide-react';
 
 export const Home = () => {
+  const navigate = useNavigate();
   const [activeFaq, setActiveFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -15,7 +17,7 @@ export const Home = () => {
       desc: 'Momentous experience supporting application drafting, filing, and prosecution in compliance with IPO, USPTO, EPO, and WIPO standards.',
       icon: <Shield size={24} />,
       link: '/services/patent',
-      sizeClass: 'bento-card-large'
+      sizeClass: ''
     },
     {
       name: 'Trademark',
@@ -50,7 +52,7 @@ export const Home = () => {
       desc: 'Dedicated support for protecting and filing new plant varieties in India across 15 eligible crop types under national legislation.',
       icon: <TreeDeciduous size={24} />,
       link: '/services/plant-protection',
-      sizeClass: 'bento-card-large'
+      sizeClass: ''
     }
   ];
 
@@ -79,10 +81,6 @@ export const Home = () => {
       <section style={{ position: 'relative', padding: '120px 0 80px 0', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, rgba(207, 185, 136, 0.12) 0%, transparent 70%)', zIndex: -1 }}></div>
         <div className="container" style={{ textAlign: 'center' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', borderRadius: '50px', backgroundColor: 'var(--brand-gold-light)', border: '1px solid var(--border-color)', marginBottom: '24px' }}>
-            <Sparkles size={14} color="var(--brand-gold-dark)" />
-            <span style={{ fontSize: '12px', fontWeight: '600', color: 'var(--text-secondary)' }}>World-Class IP Support & Research</span>
-          </div>
           <h1 style={{ fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: '800', maxWidth: '900px', margin: '0 auto 24px auto', letterSpacing: '-1px' }}>
             Protecting Innovation. <span className="text-gradient">Enforcing Rights.</span>
           </h1>
@@ -101,7 +99,8 @@ export const Home = () => {
       {/* Services Grid (Bento) */}
       <section className="section-padding" style={{ backgroundColor: 'var(--bg-primary)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '60px' ,marginTop: '-120px'
+          }}>
             <h2 style={{ fontSize: '32px', marginBottom: '16px' }}>Core IP Protection Services</h2>
             <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
               We cover the entire lifecycle of IP creation, from preliminary analytical search and filing, to litigation watch and valuation.
@@ -116,7 +115,7 @@ export const Home = () => {
                   <h3 className="bento-title">{svc.name}</h3>
                   <p className="bento-desc">{svc.desc}</p>
                 </div>
-                <Link to={svc.link} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '700', color: 'var(--brand-gold-dark)', marginTop: '24px' }}>
+                <Link key={idx} to={svc.link} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13px', fontWeight: '700', color: 'var(--brand-gold-dark)', marginTop: '24px' }}>
                   Learn More <ArrowRight size={14} />
                 </Link>
               </div>
@@ -171,7 +170,7 @@ export const Home = () => {
             </div>
 
             {/* Visual representation card */}
-            <div style={{ backgroundColor: 'var(--bg-primary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-xl)', padding: '40px', boxShadow: 'var(--shadow-lg)' }}>
+            <div style={{ backgroundColor: 'var(--bg-primary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-xl)', padding: '40px', boxShadow: 'var(--shadow-lg)'}}>
               <h3 style={{ fontSize: '22px', marginBottom: '24px' }}>Secure IP Lifecycle Support</h3>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>

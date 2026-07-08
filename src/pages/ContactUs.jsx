@@ -36,10 +36,15 @@ export const ContactUs = () => {
                 <MapPin size={20} style={{ margin: 'auto' }} />
               </div>
               <div>
-                <h4 style={{ fontSize: '15px', fontWeight: '700', marginBottom: '4px' }}>India Office (Registered Address)</h4>
-                <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                <h4 style={{ fontSize: '15px', fontWeight: '700', marginBottom: '4px' }}>Address 1</h4>
+                <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.5' , marginBottom: '8px' }}>
                   J-16, Ground Floor, Vishnu Garden,<br />
                   New Delhi, India - 110018
+                </p>
+                <h4 style={{ fontSize: '15px', fontWeight: '700', marginBottom: '4px' }}>Address 2</h4>
+                <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                228,second floor crossing republik<br />
+                  Ghaziabad, India - 201016
                 </p>
               </div>
             </div>
