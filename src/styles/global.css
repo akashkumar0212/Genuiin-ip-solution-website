@@ -217,7 +217,7 @@ img {
 .logo{
   display:flex;
   align-items:center;
-  gap:14px;
+  gap:4px;
   text-decoration:none;
   font-family:'Outfit',sans-serif;
   font-size:22px;
@@ -226,8 +226,8 @@ img {
 }
 
 .logo-icon-wrapper{
-  width:28px;
-  height:28px;
+  width:38px;
+  height:38px;
   border-radius:50%;
   overflow:hidden;
   display:flex;
@@ -240,7 +240,7 @@ img {
 
 .logo-icon{
   width:46px;
-  height:46px;
+  height:86px;
   object-fit:contain;
   border-radius: 80%;
 }
