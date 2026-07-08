@@ -226,9 +226,9 @@ img {
 }
 
 .logo-icon-wrapper{
-  width:38px;
+  width:28px;
   height:38px;
-  border-radius:50%;
+  border-radius:80%;
   overflow:hidden;
   display:flex;
   align-items:center;
@@ -239,8 +239,8 @@ img {
 }
 
 .logo-icon{
-  width:46px;
-  height:86px;
+  width:0px;
+  height:36px;
   object-fit:contain;
   border-radius: 80%;
 }
@@ -831,6 +831,7 @@ img {
   line-height: 1.6;
   max-width: 400px;
   margin-top: 16px;
+  margin-left: 4px;
 }
 
 .footer-heading {
