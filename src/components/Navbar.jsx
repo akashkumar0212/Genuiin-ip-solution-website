@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from './ThemeProvider';
+import { FaBars } from "react-icons/fa6";
 import { Sun, Moon, ChevronDown, Award, Shield, Copyright, Globe, Layers, TreeDeciduous } from 'lucide-react';
 import { FaTrademark } from "react-icons/fa6";
 
@@ -27,9 +28,11 @@ export const Navbar = () => {
     <header className="header">
       <div className="container nav-container">
         <NavLink to="/" className="logo" onClick={handleLinkClick}>
-          <div className="logo-icon"></div>
-          <div className="logo-text">Genuiin <span>IP Solution LLP</span></div>
-        </NavLink>
+        <img src="/favicon.png" alt="Genuiin Logo" className="logo-icon" />
+        <div className="logo-text">
+          Genuiin IP <span>Solution </span><span>LLP</span>
+        </div>
+      </NavLink>
 
         <nav>
           <ul className={`nav-links ${isMobileOpen ? 'active' : ''}`}>
