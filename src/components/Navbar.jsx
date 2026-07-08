@@ -27,13 +27,16 @@ export const Navbar = () => {
   return (
     <header className="header">
       <div className="container nav-container">
-      <NavLink to="/" className="logo" onClick={handleLinkClick}>
-        <img src="/favicon.png" alt="Genuiin Logo" className="logo-icon" />
-        <div className="logo-text">
-          Genuiin IP <span>Solution </span><span>LLP</span>
-        </div>
-      </NavLink>
-      
+    <NavLink to="/" className="logo" onClick={handleLinkClick}>
+      <div className="logo-icon-wrapper">
+        <img src="/Genuiin_logo.jpeg" alt="Genuiin Logo" className="logo-icon" />
+      </div>
+
+      <div className="logo-text">
+        Genuiin IP <span>Solution</span> <span>LLP</span>
+      </div>
+    </NavLink>
+
         <nav>
           <ul className={`nav-links ${isMobileOpen ? 'active' : ''}`}>
             <li>

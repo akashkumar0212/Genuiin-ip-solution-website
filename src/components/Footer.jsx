@@ -7,10 +7,14 @@ export const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <Link to="/" className="logo">
-              <div className="logo-icon"></div>
-              <div className="logo-text">Genuiin IP <span>Solution LLP</span></div>
-            </Link>
+          <Link to="/" className="footer-logo">
+            <div className="footer-logo-icon">
+              <img src="/Genuiin_logo.jpeg" alt="Genuiin Logo" className="logo-icon" />
+            </div>
+            <div className="footer-logo-text">
+              Genuiin IP <span>Solution LLP</span>
+            </div>
+          </Link>
             <p className="footer-desc">
               Provides world-class IP research analysis and consultancy services across the globe. 
               Our primary focus is to protect all kinds of Intellectual Property creations to help clients maximize their value.
