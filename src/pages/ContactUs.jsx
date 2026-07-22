@@ -7,14 +7,35 @@ export const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      setLoading(true);
+      try{
+          const response=await fetch("/api/contact.php",{
+              method:"POST",
+              headers:{
+                  "Content-Type":"application/json"
+              },
+              body:JSON.stringify(formData)
+          });
+          const data=await response.json();
+
+          if(data.success){
+              setSubmitted(true);
+              setFormData({
+                  name:"",
+                  email:"",
+                  subject:"",
+                  message:""
+              });
+          }else{
+              alert(data.message);
+          }
+      }catch(error){
+          alert("Unable to send message.");
+      }
       setLoading(false);
-      setSubmitted(true);
-    }, 1000);
-  };
+  }
 
   return (
     <>
