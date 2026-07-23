@@ -12,13 +12,35 @@ export const Helpline = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      setLoading(true);
+      try {
+          const response = await fetch("/api/helpline.php", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(formData)
+          });
+
+          const result = await response.json();
+          if (result.success) {
+              setSubmitted(true);
+              setFormData({
+                  name: "",
+                  email: "",
+                  subject: "",
+                  message: ""
+              });
+          } else {
+              alert(result.message);
+          }
+      } catch (err) {
+          console.log(err);
+          alert("Unable to submit your query.");
+      }
       setLoading(false);
-      setSubmitted(true);
-    }, 1000);
   };
 
   return (
