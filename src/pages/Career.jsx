@@ -20,13 +20,45 @@ export const Career = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      if (!file) {
+          alert("Please upload your resume.");
+          return;
+      }
+      setLoading(true);
+      try {
+          const data = new FormData();
+          data.append("name", formData.name);
+          data.append("email", formData.email);
+          data.append("role", formData.role);
+          data.append("cover", formData.cover);
+          data.append("resume", file);
+
+          const response = await fetch("/api/career.php", {
+          
+              method: "POST",
+              body: data
+          });
+
+          const result = await response.json();
+          if (result.success) {
+              setSubmitted(true);
+              setFormData({
+                  name: "",
+                  email: "",
+                  role: "",
+                  cover: ""
+              });
+              setFile(null);
+          } else {
+              alert(result.message);
+          }
+      } catch (err) {
+          console.log(err);
+          alert("Something went wrong.");
+      }
       setLoading(false);
-      setSubmitted(true);
-    }, 1200);
   };
 
   return (
@@ -48,7 +80,7 @@ export const Career = () => {
           </p>
 
           <p style={{ color: 'var(--text-secondary)', fontSize: '16px', lineHeight: '1.7', marginBottom: '32px' }}>
-            If you are interested in developing your skills in a challenging, professional environment, submit your details using the form, or email your resume and cover letter to <a href="mailto:careers@genuiin-ip.com" style={{ fontWeight: '600', color: 'var(--brand-gold-dark)' }}>careers@genuiin-ip.com</a>.
+            If you are interested in developing your skills in a challenging, professional environment, submit your details using the form, or email your resume and cover letter to <a href="mailto:info@genuiin-ip.com" style={{ fontWeight: '600', color: 'var(--brand-gold-dark)' }}>info@genuiin-ip.com</a>.
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

@@ -12,17 +12,39 @@ export const FeedbackWidget = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.query) return;
+  const handleSubmit = async (e) => {
 
-    setLoading(true);
-    // Mock API submission delay
-    setTimeout(() => {
+      e.preventDefault();
+      if (!formData.name || !formData.email || !formData.query) return;
+      setLoading(true);
+      try {
+
+          const response = await fetch("/api/helpline.php", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(formData)
+          });
+
+          const result = await response.json();
+          if (result.success) {
+              setSubmitted(true);
+              setFormData({
+                  name: "",
+                  email: "",
+                  contact: "",
+                  query: ""
+              });
+          } else {
+              alert(result.message);
+          }
+
+      } catch (err) {
+          console.error(err);
+          alert("Unable to submit your query.");
+      }
       setLoading(false);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', contact: '', query: '' });
-    }, 1000);
   };
 
   const handleChange = (e) => {
